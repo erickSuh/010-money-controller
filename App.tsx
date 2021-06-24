@@ -10,31 +10,10 @@
 
 import 'react-native-gesture-handler';
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
 import Routes from './src/routes/index';
 
 const App = () => {
-  // const isDarkMode = useColorScheme() === 'dark';
-
-  return (
-    <SafeAreaView style={styles.container}>
-      <Routes />
-    </SafeAreaView>
-  );
+  return <Routes />;
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
 
 export default App;

@@ -11,6 +11,7 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		20C684552681842C009864A1 /* MoneyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C684542681842C009864A1 /* MoneyController.swift */; };
 		2671838636D1DFB9565BDDBD /* libPods-MoneyController-MoneyControllerTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 548DF721536F2BB2047A0544 /* libPods-MoneyController-MoneyControllerTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		C43EB72609C150EF195E763A /* libPods-MoneyController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68CAB0AC8EF8442BB734CB1B /* libPods-MoneyController.a */; };
@@ -37,6 +38,8 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MoneyController/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = MoneyController/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MoneyController/main.m; sourceTree = "<group>"; };
+		20C684532681842B009864A1 /* MoneyController-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MoneyController-Bridging-Header.h"; sourceTree = "<group>"; };
+		20C684542681842C009864A1 /* MoneyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyController.swift; sourceTree = "<group>"; };
 		548DF721536F2BB2047A0544 /* libPods-MoneyController-MoneyControllerTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MoneyController-MoneyControllerTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5869FF6C619DC79BDC8CD4B5 /* Pods-MoneyController-MoneyControllerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoneyController-MoneyControllerTests.release.xcconfig"; path = "Target Support Files/Pods-MoneyController-MoneyControllerTests/Pods-MoneyController-MoneyControllerTests.release.xcconfig"; sourceTree = "<group>"; };
 		68CAB0AC8EF8442BB734CB1B /* libPods-MoneyController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MoneyController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,12 +119,14 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				20C684542681842C009864A1 /* MoneyController.swift */,
 				13B07FAE1A68108700A75B9A /* MoneyController */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* MoneyControllerTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				A5578B50E44DD59B8D988F73 /* Pods */,
+				20C684532681842B009864A1 /* MoneyController-Bridging-Header.h */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -145,7 +150,6 @@
 				B899EEBD86E18158F1114B3A /* Pods-MoneyController-MoneyControllerTests.debug.xcconfig */,
 				5869FF6C619DC79BDC8CD4B5 /* Pods-MoneyController-MoneyControllerTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -160,8 +164,8 @@
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				EB28855A9990030FA0074E52 /* [CP] Embed Pods Frameworks */,
 				5665224E5C2B739388263536 /* [CP] Copy Pods Resources */,
+				CB6E221D500CB0E16519B907 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -183,8 +187,8 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				A73E1796B8CD555914765123 /* [CP] Embed Pods Frameworks */,
 				FB50BE8E8344A2F75BE616CE /* [CP] Copy Pods Resources */,
+				07430666252BA732F5A3B512 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -208,7 +212,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1230;
 					};
 				};
 			};
@@ -265,6 +269,23 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
+		07430666252BA732F5A3B512 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MoneyController/Pods-MoneyController-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MoneyController/Pods-MoneyController-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MoneyController/Pods-MoneyController-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		3C596A3DAF42C855CDC9C1E4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -304,23 +325,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MoneyController-MoneyControllerTests/Pods-MoneyController-MoneyControllerTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A73E1796B8CD555914765123 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MoneyController/Pods-MoneyController-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MoneyController/Pods-MoneyController-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MoneyController/Pods-MoneyController-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B3DD1A0683C07AA904088025 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -343,7 +347,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EB28855A9990030FA0074E52 /* [CP] Embed Pods Frameworks */ = {
+		CB6E221D500CB0E16519B907 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -413,6 +417,7 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				20C684552681842C009864A1 /* MoneyController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +436,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B899EEBD86E18158F1114B3A /* Pods-MoneyController-MoneyControllerTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -458,6 +464,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5869FF6C619DC79BDC8CD4B5 /* Pods-MoneyController-MoneyControllerTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = MoneyControllerTests/Info.plist;
@@ -498,6 +505,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = MoneyController;
+				SWIFT_OBJC_BRIDGING_HEADER = "MoneyController-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -523,6 +531,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = MoneyController;
+				SWIFT_OBJC_BRIDGING_HEADER = "MoneyController-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
